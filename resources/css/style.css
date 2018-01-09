@@ -1,0 +1,19 @@
+body {
+  background-color: black;
+  font-size: 10px;
+}
+
+header {
+  height: 7rem;
+  width: 100%
+  text-align: center;
+  color: lawngreen;
+}
+
+.dicebox {
+  border-radius: 1rem
+  background-color: lawngreen;
+  margin: 2rem auto;
+  height: 45rem;
+  width: 45rem;
+}
