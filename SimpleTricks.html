@@ -13,7 +13,7 @@
       </header>
 
 
-		<input class="dicebox flex" type="button" onclick="submit()" value="Click for Trick!">
+		<input class="dicebox flex" type="button" onclick="submit()" id="ClickButton" value="Click for Trick!">
 
 
       <div class="customize-button flex">
@@ -339,11 +339,11 @@ function submit()
 		// output
 		if (currentTrick == "Ollie" && (currentStance == "Nollie" | currentStance == "Fakie"))
 		{
-			window.alert("Your Trick: " + currentStance);
+			document.getElementById("ClickButton").value = currentStance;
 		}
 		else
 		{
-			window.alert("Your Trick: " + currentStance + " " + currentTrick);
+			document.getElementById("ClickButton").value = currentStance + " " + currentTrick;
 		}
 	}
 
