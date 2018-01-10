@@ -1,19 +1,82 @@
 body {
+  font-family: "Arial", sans-serif;
   background-color: black;
+  font-family: "Arial Black",sans-serif;
   font-size: 10px;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  width: 70rem;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+span {
+  font-size: 3rem;
 }
 
 header {
   height: 7rem;
-  width: 100%
-  text-align: center;
-  color: lawngreen;
+  width: 100%;
+}
+
+header img {
+  height: auto;
+  max-width: 532px;
 }
 
 .dicebox {
-  border-radius: 1rem
-  background-color: lawngreen;
-  margin: 2rem auto;
-  height: 45rem;
-  width: 45rem;
+  margin: 2rem;
+  max-height: 20rem;
+  max-width: 20rem;
+  border-radius: 1rem;
+  background-color: rgb(181, 230, 29);
+}
+
+.dicebox span {
+  color: rgb(255, 255, 255);
+}
+
+.customize-button {
+  margin: 2rem;
+  max-height: 5rem;
+  max-width: 20rem;
+  border-radius: 1rem;
+  background-color: rgb(0,162,232);
+}
+
+.customize-button span {
+  color: rgb(255, 255, 255);
+}
+
+.custom-category {
+  margin: 2rem;
+  max-height: 5rem;
+  max-width: 20rem;
+  border-radius: 1rem;
+  background-color: rgb(34,177,76);
+}
+
+.custom-category span {
+  color: rgb(255, 255, 255);
+}
+
+.custom-options {
+  margin: 2rem;
+  height: auto;
+  max-width: 20rem;
+  border-radius: 1rem;
+  background-color: rgb(181, 230, 29);
+}
+
+.custom-options p {
+  margin: 1rem;
+  font-size: 1rem;
+  font-color: rgb(0, 0, 0);
 }
