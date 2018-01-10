@@ -143,14 +143,7 @@
 					</label>
 					Heelflip
 				</p>
-					
-				<p>
-					<label class="switch">
-					  <input type="checkbox" id="trick_toggleShuvit" checked>
-					  <span class="slider round"></span>
-					</label>
-					Shuv-It
-				</p>
+
 			<br>
         </div>
 		<!-- END TRICKS -->
@@ -247,7 +240,6 @@ function submit()
 	var trick_ollieEnabled = document.getElementById("trick_toggleOllie").checked;
 	var trick_kickflipEnabled = document.getElementById("trick_toggleKickflip").checked;
 	var trick_heelflipEnabled = document.getElementById("trick_toggleHeelflip").checked;
-	var trick_shuvItEnabled = document.getElementById("trick_toggleShuvit").checked;
 	// End TRICK Variables
 	
 	// Board Spin variables
@@ -336,12 +328,6 @@ function submit()
 		if (trick_heelflipEnabled == true)
 		{
 			trickArray.push("Heelflip");
-		}
-		
-		// Shuv-It
-		if (trick_shuvItEnabled == true)
-		{
-			trickArray.push("Pop Shuv-It");
 		}
 	// End Tricks //
 	
