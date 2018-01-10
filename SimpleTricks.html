@@ -337,7 +337,14 @@ function submit()
 
 		
 		// output
-		window.alert("Your Trick: " + currentStance + " " + currentTrick);
+		if (currentTrick == "Ollie" && (currentStance == "Nollie" | currentStance == "Fakie"))
+		{
+			window.alert("Your Trick: " + currentStance);
+		}
+		else
+		{
+			window.alert("Your Trick: " + currentStance + " " + currentTrick);
+		}
 	}
 
 }
