@@ -187,13 +187,30 @@
 			<div class="Intermediate tricks">
 				<div class="custom-options">
 					<br> <!-- input below -->
+						
+						<p name="Double Kickflip">
+								<label class="switch">
+								  <input type="checkbox" class="intermediate_trick" id="Intermediate_DoubleKickflip">
+								  <span class="slider round"></span>
+								</label>
+								Double Kickflip
+						</p>
+						
+						<p name="Double Heelflip">
+								<label class="switch">
+								  <input type="checkbox" class="intermediate_trick" id="Intermediate_DoubleHeelflip">
+								  <span class="slider round"></span>
+								</label>
+								Double Heelflip
+						</p>
+					
 						<p name="BS 360 Shuv">
 								<label class="switch">
 								  <input type="checkbox" class="intermediate_trick" id="Intermediate_BS360Shuv">
 								  <span class="slider round"></span>
 								</label>
 								BS 360 Pop Shuv-it
-							</p>
+						</p>
 							
 						<p name="FS 360 Shuv">
 							<label class="switch">
@@ -371,6 +388,8 @@ function submit()
 	var basic_InwardHeelflipEnabled = document.getElementById("basic_InwardHeelflip").checked;
 	
 	//Intermediate
+	var Intermediate_DoubleKickflipEnabled = document.getElementById("Intermediate_DoubleKickflip").checked;
+	var Intermediate_DoubleHeelflipEnabled = document.getElementById("Intermediate_DoubleHeelflip").checked;
 	var Intermediate_BS360ShuvEnabled = document.getElementById("Intermediate_BS360Shuv").checked;
 	var Intermediate_FS360ShuvEnabled = document.getElementById("Intermediate_FS360Shuv").checked;
 	var Intermediate_BsKickflipEnabled = document.getElementById("Intermediate_BsKickflip").checked;
@@ -388,6 +407,7 @@ function submit()
 	
 
 	// Stance //
+	if (1==1){ // stance - only using to collapse the section
 		// Standard
 		if (stance_StandardEnabled == true)
 		{
@@ -411,8 +431,10 @@ function submit()
 		{
 			stanceArray.push("Nollie");
 		}
+	}
 	
 	// Basic //
+	if (1==1) { // basic - only using to collapse section
 		//Ollie
 		if (basic_OllieEnabled == true)
 		{
@@ -478,6 +500,7 @@ function submit()
 		{
 			trickArray.push("Inward Heelflip");
 		}
+	}
 	// End Basic //
 	
 	// Intermediate //
@@ -539,21 +562,21 @@ function submit()
 	}
 	else
 	{
-		// stance
+		// Get random stance
 		var randStance = Math.floor((Math.random() * stanceArray.length));
 		var currentStance = stanceArray[randStance];
 		
-		// trick
+		// Get random trick
 		var randTrick = Math.floor((Math.random() * trickArray.length));
 		var currentTrick = trickArray[randTrick];
-		
-
-		
-		// output
+				
+		//Avoids the terms "Nollie Ollie" and "Fakie Ollie"
 		if (currentTrick == "Ollie" && (currentStance == "Nollie" | currentStance == "Fakie"))
 		{
+			
 			document.getElementById("ClickButton").value = currentStance;
 		}
+		//Output stance and trick
 		else
 		{
 			document.getElementById("ClickButton").value = currentStance + " " + currentTrick;
