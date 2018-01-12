@@ -7,402 +7,305 @@
     <link href="./resources/css/style.css" type="text/css" rel="stylesheet">
   </head>
   <body>
+	
     <div class="main">
       <header class="flex">
         <img src="./resources/images/repran-logo.png" class="logo" alt="REPRAN">
       </header>
-
-
-		<input class="dicebox flex" type="button" id="ClickButton" onclick="submit()" value="Click for Trick!">
-
-
-      <div class="customize-button flex">
-        <div>
-          <span>CUSTOMIZE</span>
-        </div>
-      </div>
 	  
-	<!-- BODY SPIN -->
+		<!-- Top / Button -->
+		<input class="dicebox flex" type="button" onclick="submit()" id="ClickButton" value="Click for Trick!">
+		<div class="customize-button flex">
+			<div>
+			  <span>CUSTOMIZE</span>
+			</div>
+		</div>
+		<!-- End Top / Button -->
+	  
+		<!-- STANCE -->
 		<div class="customize-menu">
-        <div class="custom-category flex">
-          <span>Body Spin</span>
-        </div>
-        <div class="custom-options">
-			<br>
-				<p>
-					<label class="switch">
-					  <input type="checkbox" id="bodySpin_toggleNone" checked>
-					  <span class="slider round"></span>
-					</label>
-					No spin
-				</p>
-					
-				<p>
-					<label class="switch">
-					  <input type="checkbox" id="bodySpin_toggleFS180">
-					  <span class="slider round"></span>
-					</label>
-					FS 180
-				</p>
-					
-				<p>
-					<label class="switch">
-					  <input type="checkbox" id="bodySpin_toggleBS180">
-					  <span class="slider round"></span>
-					</label>
-					BS 180
-				</p>
-					
-				<p>
-					<label class="switch">
-					  <input type="checkbox" id="bodySpin_toggleFS360">
-					  <span class="slider round"></span>
-					</label>
-					FS 360
-				</p>
-				<p>
-					<label class="switch">
-					  <input type="checkbox" id="bodySpin_toggleBS360">
-					  <span class="slider round"></span>
-					</label>
-					BS 360
-				</p>
-			<br>
-        </div>
+			<div class="custom-category flex">
+			  <span>STANCE</span>
+			</div>
+		
+			<!-- check / uncheck boxes -->
+			<input type="button" onclick="uncheckStance()" value="Uncheck all!">
+			<input type="button" onclick="checkStance()" value="Check all!">
+			<!-- end check / uncheck boxes -->
+			
+			<div class="custom-options">
+				<br>
+					<p>
+						<label class="switch">
+						  <input type="checkbox" id="stance_toggleStandard" checked>
+						  <span class="slider round"></span>
+						</label>
+						Regular
+					</p>
+						
+					<p>
+						<label class="switch">
+						  <input type="checkbox" id="stance_toggleSwitch">
+						  <span class="slider round"></span>
+						</label>
+						Switch
+					</p>
+						
+					<p>
+						<label class="switch">
+						  <input type="checkbox" id="stance_toggleFakie">
+						  <span class="slider round"></span>
+						</label>
+						Fakie
+					</p>
+						
+					<p>
+						<label class="switch">
+						  <input type="checkbox" id="stance_toggleNollie">
+						  <span class="slider round"></span>
+						</label>
+						Nollie
+					</p>
+				<br>
+			</div>
+		</div>
+		<!-- END STANCE -->
 	
-	<!-- end BODY SPIN -->
+		<!-- start BASIC -->
+		<div class="customize-menu">
+			<div class="custom-category flex">
+			  <span>Basic</span>
+			</div>
+		
+			<!-- check / uncheck boxes -->
+			<input type="button" onclick="uncheckBasic()" value="Uncheck all!">
+			<input type="button" onclick="checkBasic()" value="Check all!">
+			<!-- end check / uncheck boxes -->
+		
+			<div class="basic tricks">
+				<div class="custom-options">
+					<br>
+						<p name="Ollie">
+							<label class="switch">
+							  <input type="checkbox" class="basic_trick" id="basic_Ollie" checked>
+							  <span class="slider round"></span>
+							</label>
+							Ollie
+						</p>
+						
+						<p name="BS180">
+							<label class="switch">
+							  <input type="checkbox" class="basic_trick" id="basic_Bs180">
+							  <span class="slider round"></span>
+							</label>
+							BS 180
+						</p>
+						
+						<p name="FS180">
+							<label class="switch">
+							  <input type="checkbox" id="basic_Fs180">
+							  <span class="slider round"></span>
+							</label>
+							FS 180
+						</p>
+
+						<p name="BSShuv">
+							<label class="switch">
+							  <input type="checkbox" id="basic_BsShuv">
+							  <span class="slider round"></span>
+							</label>
+							BS Pop Shuv
+						</p>
+						
+						<p name="FSShuv">
+							<label class="switch">
+							  <input type="checkbox" id="basic_FsShuv">
+							  <span class="slider round"></span>
+							</label>
+							FS Pop Shuv
+						</p>
+							
+						<p name="Kickflip">
+							<label class="switch">
+							  <input type="checkbox" id="basic_Kickflip" checked>
+							  <span class="slider round"></span>
+							</label>
+							Kickflip
+						</p>
+							
+						<p name="Heelflip">
+							<label class="switch">
+							  <input type="checkbox" id="basic_Heelflip" checked>
+							  <span class="slider round"></span>
+							</label>
+							Heelflip
+						</p>
+						
+						<p name="Varial Kickflip">
+							<label class="switch">
+							  <input type="checkbox" id="basic_VarialKickflip">
+							  <span class="slider round"></span>
+							</label>
+							Varial Kickflip
+						</p>					
+						
+						<p name="Varial Heelflip">
+							<label class="switch">
+							  <input type="checkbox" id="basic_VarialHeelflip">
+							  <span class="slider round"></span>
+							</label>
+							Varial Heelflip
+						</p>
+
+						<p name="Hardflip">
+							<label class="switch">
+							  <input type="checkbox" id="basic_Hardflip">
+							  <span class="slider round"></span>
+							</label>
+							Hardflip
+						</p>
+						
+						<p name="Inward Heelflip">
+							<label class="switch">
+							  <input type="checkbox" id="basic_InwardHeelflip">
+							  <span class="slider round"></span>
+							</label>
+							Inward heelflip
+						</p>
+					<br>
+				</div> <!-- class custom-options -->
+			</div> <!-- class basic tricks -->
+		</div> <!-- class customize-menu -->
+		<!-- end BASIC -->
 	  
-	<!-- STANCE -->
-      <div class="customize-menu">
-        <div class="custom-category flex">
-		  <span>STANCE</span>
-        </div>
-        <div class="custom-options">
-			<br>
-				<p>
-					<label class="switch">
-					  <input type="checkbox" id="stance_toggleStandard" checked>
-					  <span class="slider round"></span>
-					</label>
-					Regular
-				</p>
-					
-				<p>
-					<label class="switch">
-					  <input type="checkbox" id="stance_toggleSwitch">
-					  <span class="slider round"></span>
-					</label>
-					Switch
-				</p>
-					
-				<p>
-					<label class="switch">
-					  <input type="checkbox" id="stance_toggleFakie">
-					  <span class="slider round"></span>
-					</label>
-					Fakie
-				</p>
-					
-				<p>
-					<label class="switch">
-					  <input type="checkbox" id="stance_toggleNollie">
-					  <span class="slider round"></span>
-					</label>
-					Nollie
-				</p>
-			<br>
-        </div>
-	<!-- END STANCE -->
+	
 		
-	<!-- TRICKS -->
-		 <div class="custom-category flex">
-          <span>Tricks</span>
-        </div>
-        <div class="custom-options">
-			<br>
-				<p>
-					<label class="switch">
-					  <input type="checkbox" id="trick_toggleOllie" checked>
-					  <span class="slider round"></span>
-					</label>
-					Ollie
-				</p>
+		<!-- Intermediate -->
+		<div class="customize-menu">
+			<div class="custom-category flex">
+			  <span>Intermediate</span>
+			</div>
+			
+			<!-- check / uncheck boxes -->
+			<input type="button" onclick="uncheckIntermediate()" value="Uncheck all!">
+			<input type="button" onclick="checkIntermediate()" value="Check all!">
+			<!-- end check / uncheck boxes -->
+			
+			<div class="Intermediate tricks">
+				<div class="custom-options">
+					<br> <!-- input below -->
+						
+						<p name="Double Kickflip">
+								<label class="switch">
+								  <input type="checkbox" class="intermediate_trick" id="Intermediate_DoubleKickflip">
+								  <span class="slider round"></span>
+								</label>
+								Double Kickflip
+						</p>
+						
+						<p name="Double Heelflip">
+								<label class="switch">
+								  <input type="checkbox" class="intermediate_trick" id="Intermediate_DoubleHeelflip">
+								  <span class="slider round"></span>
+								</label>
+								Double Heelflip
+						</p>
 					
-				<p>
-					<label class="switch">
-					  <input type="checkbox" id="trick_toggleKickflip" checked>
-					  <span class="slider round"></span>
-					</label>
-					Kickflip
-				</p>
-					
-				<p>
-					<label class="switch">
-					  <input type="checkbox" id="trick_toggleHeelflip" checked>
-					  <span class="slider round"></span>
-					</label>
-					Heelflip
-				</p>
-					
-			<br>
-        </div>
-		<!-- END TRICKS -->
+						<p name="BS 360 Shuv">
+								<label class="switch">
+								  <input type="checkbox" class="intermediate_trick" id="Intermediate_BS360Shuv">
+								  <span class="slider round"></span>
+								</label>
+								BS 360 Pop Shuv-it
+						</p>
+							
+						<p name="FS 360 Shuv">
+							<label class="switch">
+							  <input type="checkbox" class="intermediate_trick" id="Intermediate_FS360Shuv">
+							  <span class="slider round"></span>
+							</label>
+							FS 360 Pop Shuv-it
+						</p>
+						
+						<p name="Backside Kickflip">
+							<label class="switch">
+							  <input type="checkbox" class="intermediate_trick" id="Intermediate_BsKickflip">
+							  <span class="slider round"></span>
+							</label>
+							Backside Kickflip
+						</p>
+						
+						<p name="Frontside Kickflip">
+							<label class="switch">
+							  <input type="checkbox" class="intermediate_trick" id="Intermediate_FsKickflip">
+							  <span class="slider round"></span>
+							</label>
+							Frontside Kickflip
+						</p>
+						
+						<p name="Backside Heelflip">
+							<label class="switch">
+							  <input type="checkbox" class="intermediate_trick" id="Intermediate_BsHeelflip">
+							  <span class="slider round"></span>
+							</label>
+							Backside Heelflip
+						</p>
+						
+						<p name="Frontside Heelflip">
+							<label class="switch">
+							  <input type="checkbox" class="intermediate_trick" id="Intermediate_FsHeelflip">
+							  <span class="slider round"></span>
+							</label>
+							Frontside Heelflip
+						</p>
+						
+						<p name="Tre Flip">
+							<label class="switch">
+							  <input type="checkbox" class="intermediate_trick" id="Intermediate_TreFlip">
+							  <span class="slider round"></span>
+							</label>
+							Tre Flip
+						</p>
+						
+						<p name="Laser Flip">
+							<label class="switch">
+							  <input type="checkbox" class="intermediate_trick" id="Intermediate_LaserFlip">
+							  <span class="slider round"></span>
+							</label>
+							Laser Flip
+						</p>
+						
+						<p name="360 Hardflip">
+							<label class="switch">
+							  <input type="checkbox" class="intermediate_trick" id="Intermediate_360Hardflip">
+							  <span class="slider round"></span>
+							</label>
+							360 Hardflip
+						</p>
+						
+						<p name="360 Inward Heelflip">
+							<label class="switch">
+							  <input type="checkbox" class="intermediate_trick" id="Intermediate_360InwardHeelflip">
+							  <span class="slider round"></span>
+							</label>
+							360 Inward Heelflip
+						</p>
+
+					<br> <!-- input above -->
+				</div> <!-- class custom-options -->
+			</div> <!-- class Intermediate tricks -->
+		</div> <!-- class customize-menu -->
+		<!-- END Intermediate -->
 		
 		
-		<!-- BOARD SPIN -->
-		<div class="custom-category flex">
-          <span>Board Spin</span>
-        </div>
-        <div class="custom-options">
-			<br>
-				<p>
-					<label class="switch">
-					  <input type="checkbox" id="boardSpin_toggleNone" checked>
-					  <span class="slider round"></span>
-					</label>
-					No spin
-				</p>
-					
-				<p>
-					<label class="switch">
-					  <input type="checkbox" id="boardSpin_toggleFS180">
-					  <span class="slider round"></span>
-					</label>
-					FS 180
-				</p>
-					
-				<p>
-					<label class="switch">
-					  <input type="checkbox" id="boardSpin_toggleBS180">
-					  <span class="slider round"></span>
-					</label>
-					BS 180
-				</p>
-					
-				<p>
-					<label class="switch">
-					  <input type="checkbox" id="boardSpin_toggleFS360">
-					  <span class="slider round"></span>
-					</label>
-					FS 360
-				</p>
-				<p>
-					<label class="switch">
-					  <input type="checkbox" id="boardSpin_toggleBS360">
-					  <span class="slider round"></span>
-					</label>
-					BS 360
-				</p>
-			<br>
-        </div>
-		<!-- END BOARD SPIN -->
-		
-      </div>
-    </div>
+		<!-- Advanced -->
+
+		<!-- END Advanced -->
+	
+		<!-- Import tricks javascript code -->
+		<script src="resources/js/SimpleTricks.js"></script>
+		<!-- End tricks code -->
+	
+	</div> <!-- Main class div -->
   </body>
 </html>
-
-
-
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-<script>
-function main()
-		{
-			alert("woahhh duuuuude! \nThis will have tricks soon!");
-		}
-
-function submit() 
-{
-
-	// Body Spin variables
-	var bodySpinArray = [];
-	var bodySpin_noneEnabled = document.getElementById("bodySpin_toggleNone").checked;
-	var bodySpin_FS180Enabled = document.getElementById("bodySpin_toggleFS180").checked;
-	var bodySpin_BS180Enabled = document.getElementById("bodySpin_toggleBS180").checked;
-	var bodySpin_FS360Enabled = document.getElementById("bodySpin_toggleFS360").checked;
-	var bodySpin_BS360Enabled = document.getElementById("bodySpin_toggleBS360").checked;
-	// End body SPIN Variables
-
-	// STANCE Variables
-	var stanceArray = [];
-	var stance_StandardEnabled = document.getElementById("stance_toggleStandard").checked;
-	var stance_SwitchEnabled = document.getElementById("stance_toggleSwitch").checked;
-	var stance_FakieEnabled = document.getElementById("stance_toggleFakie").checked;
-	var stance_NollieEnabled = document.getElementById("stance_toggleNollie").checked;
-	// End STANCE Variables
-	
-	// Trick variables
-	var trickArray = [];
-	var trick_ollieEnabled = document.getElementById("trick_toggleOllie").checked;
-	var trick_kickflipEnabled = document.getElementById("trick_toggleKickflip").checked;
-	var trick_heelflipEnabled = document.getElementById("trick_toggleHeelflip").checked;
-	//var trick_shuvItEnabled = document.getElementById("trick_toggleShuvit").checked;
-	// End TRICK Variables
-	
-	// Board Spin variables
-	var boardSpinArray = [];
-	var boardSpin_noneEnabled = document.getElementById("boardSpin_toggleNone").checked;
-	var boardSpin_FS180Enabled = document.getElementById("boardSpin_toggleFS180").checked;
-	var boardSpin_BS180Enabled = document.getElementById("boardSpin_toggleBS180").checked;
-	var boardSpin_FS360Enabled = document.getElementById("boardSpin_toggleFS360").checked;
-	var boardSpin_BS360Enabled = document.getElementById("boardSpin_toggleBS360").checked;
-	// End BOARD SPIN Variables
-	
-	
-	
-	// Body Spin //
-		//None
-		if (bodySpin_noneEnabled == true)
-		{
-			bodySpinArray.push(""); // no spin
-		}
-		
-		//FS 180
-		if (bodySpin_FS180Enabled == true)
-		{
-			bodySpinArray.push("FS 180");
-		}
-		
-		//BS 180
-		if (bodySpin_BS180Enabled == true)
-		{
-			bodySpinArray.push("BS 180");
-		}
-		
-		//FS 360
-		if (bodySpin_FS360Enabled == true)
-		{
-			bodySpinArray.push("FS 360");
-		}
-		
-		//BS 360
-		if (bodySpin_BS360Enabled == true)
-		{
-			bodySpinArray.push("BS 360");
-		}
-	// End Body Spin //
-	
-	
-	// Stance //
-		// Standard
-		if (stance_StandardEnabled == true)
-		{
-			stanceArray.push(""); // standard
-		}
-		
-		// Switch
-		if (stance_SwitchEnabled == true)
-		{
-			stanceArray.push("Switch");
-		}
-		
-		// Fakie
-		if (stance_FakieEnabled == true)
-		{
-			stanceArray.push("Fakie");
-		}
-		
-		// Nollie
-		if (stance_NollieEnabled == true)
-		{
-			stanceArray.push("Nollie");
-		}
-	
-	// Tricks //
-		//Ollie
-		if (trick_ollieEnabled == true)
-		{
-			trickArray.push("Ollie");
-		}
-		
-		// Kickflip 
-		if (trick_kickflipEnabled == true)
-		{
-			trickArray.push("Kickflip");
-		}
-		
-		// Heelflip
-		if (trick_heelflipEnabled == true)
-		{
-			trickArray.push("Heelflip");
-		}
-		
-		/*
-		// Shuv-It
-		if (trick_shuvItEnabled == true)
-		{
-			trickArray.push("Pop Shuv-It");
-		}
-		*/
-	// End Tricks //
-	
-	// Board Spin //
-		//None
-		if (boardSpin_noneEnabled == true)
-		{
-			boardSpinArray.push(""); //no spin
-		}
-		
-		//FS 180
-		if (boardSpin_FS180Enabled == true)
-		{
-			boardSpinArray.push("FS 180 Shuv-It");
-		}
-		
-		//BS 180
-		if (boardSpin_BS180Enabled == true)
-		{
-			boardSpinArray.push("BS 180 Shuv-It");
-		}
-		
-		//FS 360
-		if (boardSpin_FS360Enabled == true)
-		{
-			boardSpinArray.push("FS 360 Shuv-It");
-		}
-		
-		//BS 360
-		if (boardSpin_BS360Enabled == true)
-		{
-			boardSpinArray.push("BS 360 Shuv-It");
-		}
-	// End Board Spin //
-	
-	// Output
-	if (trickArray.length == 0 | stanceArray.length == 0 | boardSpinArray.length == 0)
-	{
-		window.alert("Please ensure at least one item from each section is selected!")
-	}
-	else
-	{
-		// body spin
-		var randBodySpin = Math.floor((Math.random() * bodySpinArray.length));
-		var currentBodySpin = bodySpinArray[randBodySpin]
-		
-		// stance
-		var randStance = Math.floor((Math.random() * stanceArray.length));
-		var currentStance = stanceArray[randStance]
-				
-		// trick
-		var randTrick = Math.floor((Math.random() * trickArray.length));
-		var currentTrick = trickArray[randTrick]
-		
-		// board spin
-		var randBoardSpin = Math.floor((Math.random() * boardSpinArray.length));
-		var currentBoardSpin = boardSpinArray[randBoardSpin]
-		
-		// output
-		if (currentTrick == "Ollie" && (currentStance == "Nollie" || currentBoardSpin != ""))
-		{
-			currentTrick = ""
-		}
-		document.getElementById("ClickButton").value = currentBodySpin + " " + currentStance + " " + currentBoardSpin + " " + currentTrick;
-		//window.alert("Your Trick: " + currentBodySpin + " " + currentStance + " " + currentBoardSpin + " " + currentTrick);
-	}
-
-}
-	
-	</script>
